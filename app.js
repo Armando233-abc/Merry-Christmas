@@ -1,17 +1,15 @@
 let eye_part = document.querySelector("#eye_part")
 
-function apertura_occhio(){
-    let eye = document.querySelector(".eye")
+function apertura_occhio(eye){
     eye.style.height = "30px"
     eye.style.width = "30px"
-    eye.style.borderRadius = "100%"
+    eye.style.borderRadius = "80% 80% 100% 100%"
     eye.style.background = "#fff"
     eye.style.margin = "10px"
 }
 
 
-function chiusura_occhio(){
-    let eye = document.querySelector(".eye")
+function chiusura_occhio(eye){
     eye.style.height = "2px"
     eye.style.width = "30px"
     eye.style.borderRadius = "0 0 500% 500%"
@@ -21,8 +19,7 @@ function chiusura_occhio(){
 }
 
 
-function pupilla_visibile(){
-    let pupil = document.querySelector(".pupil")
+function pupilla_visibile(pupil){
     pupil.style.height = "12px"
     pupil.style.width = "12px"
     pupil.style.borderRadius = "500%"
@@ -31,17 +28,30 @@ function pupilla_visibile(){
 }
 
 
-function pupilla_invisibile(){
-    let pupil = document.querySelector(".pupil")
+function pupilla_invisibile(pupil){
     pupil.style.height = "0px"
 }
 
 eye_part.addEventListener("mouseover", ()=>{
-    apertura_occhio()
-    pupilla_visibile()
+    let left_eye = document.querySelector(".sinistro")
+    let right_eye = document.querySelector(".destro")
+
+    let left_pupil = document.querySelector(".left")
+    let right_pupil = document.querySelector(".right")
+    apertura_occhio(left_eye)
+    apertura_occhio(right_eye)
+    pupilla_visibile(left_pupil)
+    pupilla_visibile(right_pupil)
 })
 
 eye_part.addEventListener("mouseout", ()=>{
-    chiusura_occhio()
-    pupilla_invisibile()
+    let left_eye = document.querySelector(".sinistro")
+    let right_eye = document.querySelector(".destro")
+
+    let left_pupil = document.querySelector(".left")
+    let right_pupil = document.querySelector(".right")
+    chiusura_occhio(left_eye)
+    chiusura_occhio(right_eye)
+    pupilla_invisibile(left_pupil)
+    pupilla_invisibile(right_pupil)
 })
