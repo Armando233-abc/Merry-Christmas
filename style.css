@@ -54,12 +54,14 @@ body{
 .beard{
     position: relative;
     margin: auto;
-    height: 100px;
+    height: 120px;
     width: 170px;
     background: #fff;
+    border-radius: 8% 8% 100% 100%;
 }
 
 .nose{
+    position: relative;
     margin: auto;
     height: 30px;
     width: 30px;
@@ -68,6 +70,7 @@ body{
 }
 
 .mouth{
+    position: relative;
     margin: auto;
     margin-top: 10px;
     height: 10px;
