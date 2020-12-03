@@ -2,11 +2,13 @@ body{
     margin: 0;
     padding: 0;
     background-color: green;
+}
+
+.santa{
+    margin: auto;
     display: flex;
-    height: 100vh;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 
@@ -24,6 +26,8 @@ body{
     position: relative;
     top: 40px;
 }
+
+
 .pon_pon{
     margin: auto;
     position: relative;
@@ -101,12 +105,11 @@ body{
     position: relative;
     margin: auto;
     margin-top: 10px;
-    height: 10px;
-    width: 30px;
-
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 500%;
     background: #000;
+
+    animation: mouth 5s infinite;
+
 }
 
 .corpo{
@@ -114,7 +117,7 @@ body{
     flex-direction: column;
     height: 150px;
     width: 250px;
-    margin: 0;
+    margin: auto;
     background-color: red;
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px
@@ -128,26 +131,23 @@ body{
     background: yellow;
 }
 
-@media (max-width: 576px) {
-    .face{
-        height: 170px;
-        width: 140px;
+@keyframes mouth{
+    0%{
+        height: 10px;
+        width: 10px;
     }
-    .beard{
-        height: 90px;
-        width: 140px;
+
+    25%{
+        height: 15px;
+        width: 15px;
     }
-    #eye_part{
-        height: 55px;
+
+    50%{
+        height: 20px;
+        width: 20px;
     }
-    .red{
-        height: 70px;
-    }
-    .corpo{
-        width: 200px;
-    }
-    .hat{
-        top: 45px;
+    to{
+        height: 10px;
+        width: 10px;
     }
 }
-
