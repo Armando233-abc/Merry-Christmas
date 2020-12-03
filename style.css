@@ -11,31 +11,50 @@ body{
 
 
 .face{
-    margin: 0;
+    margin: auto;
     height: 200px;
     width: 170px;
     background: burlywood;
+    border: 3px solid white;
     border-radius: 90%;
     flex-direction: column;
 }
+
+.hat{
+    position: relative;
+    top: 40px;
+}
 .pon_pon{
+    margin: auto;
+    position: relative;
+    top: 15px;
     height: 30px;
     width: 30px;
     background: #fff;
     border-radius: 500%;
 }
+
 .red{
+    margin: auto;
+    position: relative;
+    top: 10px;
     height: 90px;
-    width: 110px;
+    width: 130px;
     background: red;
-    border-radius: 50% 50% 0 0;
+    border-radius: 300% 300% 0 0;
 }
+
 .white{
+    position: relative;
     margin: auto;
     height: 40px;
     width: 140px;
     background: #fff;
     border-radius: 30px;
+}
+
+.fronte{
+    height: 40px;
 }
 
 #eye_part{
@@ -73,8 +92,8 @@ body{
     position: relative;
     margin: auto;
     height: 30px;
-    width: 30px;
-    border-radius: 60%;
+    width: 40px;
+    border-radius: 50%;
     background: burlywood;
 }
 
@@ -111,18 +130,24 @@ body{
 
 @media (max-width: 576px) {
     .face{
-        height: 150px;
+        height: 170px;
         width: 140px;
     }
     .beard{
         height: 90px;
-        width: 130px;
+        width: 140px;
+    }
+    #eye_part{
+        height: 55px;
     }
     .red{
         height: 70px;
     }
     .corpo{
         width: 200px;
+    }
+    .hat{
+        top: 45px;
     }
 }
 
