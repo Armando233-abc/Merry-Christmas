@@ -5,10 +5,10 @@ body{
 }
 
 .santa{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
 }
 
 
