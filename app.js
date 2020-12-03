@@ -1,5 +1,11 @@
 let eye_part = document.querySelector("#eye_part")
 
+function data(){
+    let date = new Date()
+    let data = date.getDate()
+    let mese = date.getMonth() + 1
+}
+
 function apertura_occhio(eye){
     eye.style.height = "30px"
     eye.style.width = "30px"
@@ -11,6 +17,8 @@ function apertura_occhio(eye){
     bocca.style.height = "10px"
     bocca.style.width = "30px"
     bocca.style.animation = "none"
+
+    data()
 }
 
 
