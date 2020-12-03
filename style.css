@@ -105,10 +105,10 @@ body{
     position: relative;
     margin: auto;
     margin-top: 10px;
-    border-radius: 500%;
+    border-radius: 30% 30% 50% 50%;
     background: #000;
-
-    animation: mouth 1.3s ease-in-out infinite ;
+    transition: ease-in-out 0.5s;
+    animation: mouth 1.3s infinite;
 
 }
 

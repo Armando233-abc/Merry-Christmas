@@ -6,6 +6,11 @@ function apertura_occhio(eye){
     eye.style.borderRadius = "80% 80% 100% 100%"
     eye.style.background = "#fff"
     eye.style.margin = "10px"
+
+    let bocca = document.querySelector(".mouth")
+    bocca.style.height = "10px"
+    bocca.style.width = "30px"
+    bocca.style.animation = "none"
 }
 
 
@@ -16,6 +21,9 @@ function chiusura_occhio(eye){
     eye.style.background = "#000"
     eye.style.border = "4px solid black"
     eye.style.marginTop = "25px"
+
+    let bocca = document.querySelector(".mouth")
+    bocca.style.animation = "mouth 1.3s infinite"
 }
 
 
