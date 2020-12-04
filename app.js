@@ -4,6 +4,12 @@ function data(){
     let date = new Date()
     let data = date.getDate()
     let mese = date.getMonth() + 1
+
+    if(data === 25 && mese === 12){
+        return true
+    } else {
+        return false
+    }
 }
 
 function apertura_occhio(eye){
@@ -16,9 +22,8 @@ function apertura_occhio(eye){
     let bocca = document.querySelector(".mouth")
     bocca.style.height = "10px"
     bocca.style.width = "30px"
+    bocca.style.borderRadius = "0 0 500% 500%"
     bocca.style.animation = "none"
-
-    data()
 }
 
 
@@ -49,25 +54,37 @@ function pupilla_invisibile(pupil){
 }
 
 eye_part.addEventListener("mouseover", ()=>{
-    let left_eye = document.querySelector(".sinistro")
-    let right_eye = document.querySelector(".destro")
+    if(data()){
+        let left_eye = document.querySelector(".sinistro")
+        let right_eye = document.querySelector(".destro")
 
-    let left_pupil = document.querySelector(".left")
-    let right_pupil = document.querySelector(".right")
-    apertura_occhio(left_eye)
-    apertura_occhio(right_eye)
-    pupilla_visibile(left_pupil)
-    pupilla_visibile(right_pupil)
+        let left_pupil = document.querySelector(".left")
+        let right_pupil = document.querySelector(".right")
+        apertura_occhio(left_eye)
+        apertura_occhio(right_eye)
+        pupilla_visibile(left_pupil)
+        pupilla_visibile(right_pupil)
+    } else{
+        const testo = document.querySelector(".text")
+        testo.innerHTML = "Non è ancora Natale. Lasciami dormire"
+    }
+    
 })
 
 eye_part.addEventListener("mouseout", ()=>{
-    let left_eye = document.querySelector(".sinistro")
-    let right_eye = document.querySelector(".destro")
+    if (data()){
+         let left_eye = document.querySelector(".sinistro")
+        let right_eye = document.querySelector(".destro")
 
-    let left_pupil = document.querySelector(".left")
-    let right_pupil = document.querySelector(".right")
-    chiusura_occhio(left_eye)
-    chiusura_occhio(right_eye)
-    pupilla_invisibile(left_pupil)
-    pupilla_invisibile(right_pupil)
+        let left_pupil = document.querySelector(".left")
+        let right_pupil = document.querySelector(".right")
+        chiusura_occhio(left_eye)
+        chiusura_occhio(right_eye)
+        pupilla_invisibile(left_pupil)
+        pupilla_invisibile(right_pupil)
+    }else{
+        const testo = document.querySelector(".text")
+        testo.innerHTML = ""
+    }
+   
 })
