@@ -15,6 +15,11 @@ body{
 }
 
 
+.hat{
+    position: relative;
+    top: 170px;
+}
+
 .face{
     margin: auto;
     height: 200px;
@@ -25,31 +30,50 @@ body{
     flex-direction: column;
 }
 
-
-.hat{
-    position: relative;
-    top: 40px;
-}
-
-
 .pon_pon{
-    margin: auto;
     position: relative;
-    top: 30px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background: #fff;
     border-radius: 500%;
+}
+
+.red_part{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    height: 90px;
+    width: 30px;
+    background: red;
+    border-radius: 0 20px 20px 20px;
+}
+
+.white_part{
+    position: relative;
+    left: -1px;
+    top: 25px;
+    height: 40px;
+    width: 10px;
+    background: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.pendolo{
+    position: relative;
+    bottom: 70px;
+    left: 180px;
 }
 
 .red{
     margin: auto;
     position: relative;
-    top: 30px;
+    left: 15px;
+    top: 20px;
     height: 100px;
-    width: 120px;
+    width: 150px;
     background: red;
-    border-radius: 300% 300% 0 0;
+    border-radius: 600px 600px 0 0;
 }
 
 .white{
@@ -58,7 +82,8 @@ body{
     height: 40px;
     width: 140px;
     background: #fff;
-    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .fronte{
@@ -67,6 +92,7 @@ body{
 
 #eye_part{
     position: relative;
+    top: 30px;
     height: 60px;
     display: flex;
     place-content: center;
@@ -90,6 +116,7 @@ body{
 
 .beard{
     position: relative;
+    top: 40px;
     margin: auto;
     height: 120px;
     width: 170px;
@@ -166,7 +193,6 @@ body{
     text-align: center;
 }
 
-
 /*responsive telefono*/
 @media (max-width: 576px) {
     .corpo{
@@ -185,11 +211,21 @@ body{
 
     .red{
         height: 80px;
-        width: 120px;
+        width: 140px;
     }
-
+    .pendolo{
+        left: 160px;
+    }
+    .red_part{
+        border-radius: 0 60px 20px 20px;
+    }
     .white{
         height: 40px;
         width: 130px;
+    }
+
+    .pon_pon{
+        height: 30px;
+        width: 30px;
     }
 }
