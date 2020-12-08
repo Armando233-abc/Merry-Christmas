@@ -194,10 +194,9 @@ body{
     background: var(--face);
 }
 
-.triangle{
-    border-left: 27px solid transparent;
-	border-right: 27px solid transparent;
-	border-top: 40px solid var(--face);
+.icon{
+    height: 60px;
+    width: 60px;
 }
 
 @keyframes mouth{
@@ -268,5 +267,10 @@ body{
 
     .tascino{
         left: 135px;
+    }
+
+    .icon{
+        width: 40px;
+        height: 40px;
     }
 }
