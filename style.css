@@ -156,13 +156,15 @@ body{
 .corpo{
     display: flex;
     flex-direction: column;
+    margin: auto;
+    justify-content: center;
     height: 150px;
     width: 250px;
-    margin: auto;
     background-color: var(--rosso);
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px
 }
+
 
 .button{
     margin: auto;
@@ -170,6 +172,24 @@ body{
     width: 20px;
     border-radius: 20px;
     background: var(--button);
+}
+
+.tascino{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+    bottom: 100px;
+    left: 160px;
+    height: 50px;
+    width: 60px;
+}
+
+.part_up{
+    background: var(--button);
+}
+
+.part_down{
+    background: var(--face);
 }
 
 @keyframes mouth{
@@ -236,5 +256,9 @@ body{
     .pon_pon{
         height: 30px;
         width: 30px;
+    }
+
+    .tascino{
+        left: 135px;
     }
 }
