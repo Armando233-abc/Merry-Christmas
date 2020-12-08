@@ -174,9 +174,9 @@ body{
     background: var(--button);
 }
 
-.tascino{
+.stemma{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     position: relative;
     bottom: 100px;
     left: 160px;
@@ -195,7 +195,9 @@ body{
 }
 
 .triangle{
-    background: var(--face);
+    border-left: 27px solid transparent;
+	border-right: 27px solid transparent;
+	border-top: 40px solid var(--face);
 }
 
 @keyframes mouth{
