@@ -176,7 +176,7 @@ body{
 
 .tascino{
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     bottom: 100px;
     left: 160px;
@@ -187,9 +187,14 @@ body{
 
 .part_up{
     background: var(--button);
+    border-radius: 10px 10px 0px 0px;
 }
 
-.part_down{
+.part_center{
+    background: var(--face);
+}
+
+.triangle{
     background: var(--face);
 }
 
