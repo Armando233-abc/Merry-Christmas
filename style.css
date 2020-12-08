@@ -1,7 +1,16 @@
+:root{
+    --bg : green;
+    --face : burlywood;
+    --bianco : whitesmoke;
+    --rosso : red;
+    --nero : #000;
+    --button : yellow;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: var(--bg);
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -24,7 +33,7 @@ body{
     margin: auto;
     height: 200px;
     width: 170px;
-    background: burlywood;
+    background: var(--face);
     border: 3px solid white;
     border-radius: 90%;
     flex-direction: column;
@@ -34,7 +43,7 @@ body{
     position: relative;
     height: 40px;
     width: 40px;
-    background: #fff;
+    background: var(--bianco);
     border-radius: 500%;
 }
 
@@ -44,7 +53,7 @@ body{
     left: 5px;
     height: 90px;
     width: 30px;
-    background: red;
+    background: var(--rosso);
     border-radius: 0 20px 20px 20px;
 }
 
@@ -54,7 +63,7 @@ body{
     top: 25px;
     height: 40px;
     width: 10px;
-    background: white;
+    background: var(--bianco);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -72,7 +81,7 @@ body{
     top: 20px;
     height: 100px;
     width: 150px;
-    background: red;
+    background: var(--rosso);
     border-radius: 600px 600px 0 0;
 }
 
@@ -81,7 +90,7 @@ body{
     margin: auto;
     height: 40px;
     width: 140px;
-    background: #fff;
+    background: var(--bianco);
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
@@ -107,7 +116,7 @@ body{
     width: 30px;
     border-radius: 0 0 500% 500%;
     border: 4px solid black;
-    background: #000;
+    background: var(--nero);
     display: flex;
     transition: ease-in-out 0.3s;
 }
@@ -120,7 +129,7 @@ body{
     margin: auto;
     height: 120px;
     width: 170px;
-    background: #fff;
+    background: var(--bianco);
     border-radius: 8% 8% 100% 100%;
 }
 
@@ -130,7 +139,7 @@ body{
     height: 30px;
     width: 40px;
     border-radius: 50%;
-    background: burlywood;
+    background: var(--face);
 }
 
 .mouth{
@@ -138,7 +147,7 @@ body{
     margin: auto;
     margin-top: 10px;
     border-radius: 30% 30% 50% 50%;
-    background: #000;
+    background: var(--nero);
     transition: ease-in-out 0.5s;
     animation: mouth 1.3s infinite;
 
@@ -150,7 +159,7 @@ body{
     height: 150px;
     width: 250px;
     margin: auto;
-    background-color: red;
+    background-color: var(--rosso);
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px
 }
@@ -160,7 +169,7 @@ body{
     height: 20px;
     width: 20px;
     border-radius: 20px;
-    background: yellow;
+    background: var(--button);
 }
 
 @keyframes mouth{
