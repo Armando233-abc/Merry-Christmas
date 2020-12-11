@@ -273,4 +273,8 @@ body{
         width: 40px;
         height: 40px;
     }
+
+    #eye_part{
+        margin-top: 10px;
+    }
 }

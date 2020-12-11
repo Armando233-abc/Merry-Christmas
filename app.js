@@ -5,7 +5,7 @@ function data(){
     let data = date.getDate()
     let mese = date.getMonth() + 1
 
-    if(data === 25 && mese === 12){
+    if(data === 11 && mese === 12){
         return true
     } else {
         return false
@@ -53,38 +53,25 @@ function pupilla_invisibile(pupil){
     pupil.style.height = "0px"
 }
 
-eye_part.addEventListener("mouseover", ()=>{
-    if(data()){
-        let left_eye = document.querySelector(".sinistro")
-        let right_eye = document.querySelector(".destro")
 
-        let left_pupil = document.querySelector(".left")
-        let right_pupil = document.querySelector(".right")
-        apertura_occhio(left_eye)
-        apertura_occhio(right_eye)
-        pupilla_visibile(left_pupil)
-        pupilla_visibile(right_pupil)
-    } else{
+if (data()){
+    let left_eye = document.querySelector(".sinistro")
+    let right_eye = document.querySelector(".destro")
+    let left_pupil = document.querySelector(".left")
+    let right_pupil = document.querySelector(".right")
+    apertura_occhio(left_eye)
+    apertura_occhio(right_eye)
+    pupilla_visibile(left_pupil)
+    pupilla_visibile(right_pupil)
+}else{
+    eye_part.addEventListener("mouseover", ()=>{
         const testo = document.querySelector(".text")
         testo.innerHTML = "Non è ancora Natale. Lasciami dormire"
-    }
-    
-})
+    })
 
-eye_part.addEventListener("mouseout", ()=>{
-    if (data()){
-         let left_eye = document.querySelector(".sinistro")
-        let right_eye = document.querySelector(".destro")
-
-        let left_pupil = document.querySelector(".left")
-        let right_pupil = document.querySelector(".right")
-        chiusura_occhio(left_eye)
-        chiusura_occhio(right_eye)
-        pupilla_invisibile(left_pupil)
-        pupilla_invisibile(right_pupil)
-    }else{
+    eye_part.addEventListener("mouseleave", ()=>{
         const testo = document.querySelector(".text")
         testo.innerHTML = ""
-    }
-   
-})
+    })
+}
+
