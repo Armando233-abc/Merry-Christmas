@@ -68,6 +68,7 @@ if (data()){
 }else{
     eye_part.addEventListener("mouseover", ()=>{
         const testo = document.querySelector(".text")
+        testo.style.animation = "testo 1.5s normal"
         testo.innerHTML = "Non è ancora Natale. Lasciami dormire"
     })
 
