@@ -27,17 +27,17 @@ function apertura_occhio(eye){
 }
 
 
-function chiusura_occhio(eye){
-    eye.style.height = "2px"
-    eye.style.width = "30px"
-    eye.style.borderRadius = "0 0 500% 500%"
-    eye.style.background = "#000"
-    eye.style.border = "4px solid black"
-    eye.style.marginTop = "25px"
+// function chiusura_occhio(eye){
+//     eye.style.height = "2px"
+//     eye.style.width = "30px"
+//     eye.style.borderRadius = "0 0 500% 500%"
+//     eye.style.background = "#000"
+//     eye.style.border = "4px solid black"
+//     eye.style.marginTop = "25px"
 
-    let bocca = document.querySelector(".mouth")
-    bocca.style.animation = "mouth 1.3s infinite"
-}
+//     let bocca = document.querySelector(".mouth")
+//     bocca.style.animation = "mouth 1.3s infinite"
+// }
 
 
 function pupilla_visibile(pupil){
@@ -49,9 +49,9 @@ function pupilla_visibile(pupil){
 }
 
 
-function pupilla_invisibile(pupil){
-    pupil.style.height = "0px"
-}
+// function pupilla_invisibile(pupil){
+//     pupil.style.height = "0px"
+// }
 
 
 if (data()){
@@ -63,6 +63,8 @@ if (data()){
     apertura_occhio(right_eye)
     pupilla_visibile(left_pupil)
     pupilla_visibile(right_pupil)
+    const testo = document.querySelector(".text")
+    testo.innerHTML = "Buon Natale"
 }else{
     eye_part.addEventListener("mouseover", ()=>{
         const testo = document.querySelector(".text")
