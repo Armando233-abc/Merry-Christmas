@@ -5,10 +5,10 @@ function data(){
     let data = date.getDate()
     let mese = date.getMonth() + 1
 
-    if(data === 16 && mese === 12){
+    if(data === 25 && mese === 12){
         return true
     } else {
-        return true
+        return false
     }
 }
 
