@@ -229,23 +229,7 @@ body{
     text-align: center;
 }
 
-@keyframes testo{
-    0%{
-        opacity: 0.2;
-    }
 
-    25%{
-        opacity: 0.3;
-    }
-
-    50%{
-        opacity: 0.4;
-    }
-
-    100%{
-        opacity: 0.5;
-    }
-}
 
 /*responsive telefono*/
 @media (max-width: 576px) {
