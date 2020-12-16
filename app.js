@@ -8,7 +8,7 @@ function data(){
     if(data === 16 && mese === 12){
         return true
     } else {
-        return false
+        return true
     }
 }
 
