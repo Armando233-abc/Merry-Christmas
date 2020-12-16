@@ -5,7 +5,7 @@ function data(){
     let data = date.getDate()
     let mese = date.getMonth() + 1
 
-    if(data === 11 && mese === 12){
+    if(data === 25 && mese === 12){
         return true
     } else {
         return false
@@ -13,31 +13,35 @@ function data(){
 }
 
 function apertura_occhio(eye){
-    eye.style.height = "30px"
+    eye.style.height = "28px"
     eye.style.width = "30px"
     eye.style.borderRadius = "80% 80% 100% 100%"
     eye.style.background = "#fff"
-    eye.style.margin = "10px"
+    eye.style.marginTop = "15px"
+
 
     let bocca = document.querySelector(".mouth")
     bocca.style.height = "10px"
     bocca.style.width = "30px"
-    bocca.style.borderRadius = "0 0 500% 500%"
+    bocca.style.borderRadius = "100% 100% 500% 500%"
     bocca.style.animation = "none"
 }
 
 
-// function chiusura_occhio(eye){
-//     eye.style.height = "2px"
-//     eye.style.width = "30px"
-//     eye.style.borderRadius = "0 0 500% 500%"
-//     eye.style.background = "#000"
-//     eye.style.border = "4px solid black"
-//     eye.style.marginTop = "25px"
+function chiusura_occhio(eye){
+    for(let i = 30; i > 2; i--){
+        eye.style.height = i + "px"
+    }
+    
+    eye.style.width = "30px"
+    eye.style.borderRadius = "0 0 500% 500%"
+    eye.style.background = "#000"
+    eye.style.border = "4px solid black"
+    eye.style.marginTop = "25px"
 
-//     let bocca = document.querySelector(".mouth")
-//     bocca.style.animation = "mouth 1.3s infinite"
-// }
+    let bocca = document.querySelector(".mouth")
+    bocca.style.animation = "mouth 1.3s infinite"
+}
 
 
 function pupilla_visibile(pupil){
@@ -49,12 +53,12 @@ function pupilla_visibile(pupil){
 }
 
 
-// function pupilla_invisibile(pupil){
-//     pupil.style.height = "0px"
-// }
+function pupilla_invisibile(pupil){
+    pupil.style.height = "0px"
+}
 
 
-if (data()){
+function open(){
     let left_eye = document.querySelector(".sinistro")
     let right_eye = document.querySelector(".destro")
     let left_pupil = document.querySelector(".left")
@@ -64,7 +68,27 @@ if (data()){
     pupilla_visibile(left_pupil)
     pupilla_visibile(right_pupil)
     const testo = document.querySelector(".text")
+    testo.style.fontSize = "60px"
     testo.innerHTML = "Buon Natale"
+}
+
+// forse la userò 
+function close(){
+    let left_eye = document.querySelector(".sinistro")
+    let right_eye = document.querySelector(".destro")
+    let left_pupil = document.querySelector(".left")
+    let right_pupil = document.querySelector(".right")
+
+    chiusura_occhio(left_eye)
+    chiusura_occhio(right_eye)
+
+    pupilla_invisibile(left_pupil)
+    pupilla_invisibile(right_pupil)
+}
+
+if (data()){
+    open()
+    //close()
 }else{
     eye_part.addEventListener("mouseover", ()=>{
         const testo = document.querySelector(".text")
