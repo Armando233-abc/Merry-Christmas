@@ -47,13 +47,14 @@ body{
     height: 40px;
     width: 40px;
     background: var(--bianco);
+    border: 1px solid grey;
     border-radius: 500%;
 }
 
 .red_part{
     position: relative;
     top: 5px;
-    left: 5px;
+    left: 4px;
     height: 90px;
     width: 30px;
     background: var(--rosso);
@@ -63,7 +64,7 @@ body{
 .white_part{
     position: relative;
     left: -1px;
-    top: 25px;
+    top: 35px;
     height: 40px;
     width: 10px;
     background: var(--bianco);
@@ -73,7 +74,7 @@ body{
 
 .pendolo{
     position: relative;
-    bottom: 70px;
+    bottom: 80px;
     left: 180px;
 }
 
