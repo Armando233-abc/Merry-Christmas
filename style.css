@@ -56,7 +56,7 @@ body{
     height: 90px;
     width: 30px;
     background: var(--rosso);
-    border-radius: 0 20px 20px 20px;
+    border-radius: 0 25px 20px 20px;
 }
 
 .white_part{
@@ -84,7 +84,7 @@ body{
     height: 100px;
     width: 150px;
     background: var(--rosso);
-    border-radius: 600px 600px 0 0;
+    border-radius: 600px 600px 100px 0;
 }
 
 .white{
